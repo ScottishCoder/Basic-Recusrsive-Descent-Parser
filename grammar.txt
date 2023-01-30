@@ -1,9 +1,10 @@
-parse::=expression;
-expression::= expression + expression
-| expression - expression
-| expression * expression
-| expression / expression
+  parse_rule ::= expression_rule ;
+  expression_rule::= int_rule + expression
+| int_rule - expression
+| int_rule * expression
+| int_rule / expression
 | '(' expression ')'
-| int
+| int_rule
+;
 
-int::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 ;
+int_rule::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 ;
